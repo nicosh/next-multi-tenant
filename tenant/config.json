@@ -1,0 +1,7 @@
+{
+    "SSR" : true,
+    "UseLocalStorage" : true, 
+    "LocalStorageTtl" : 60000,
+    "LocalStorageKey" : "websitebdata",
+    "DefaultTemplateName" : "default"
+}

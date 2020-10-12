@@ -1,0 +1,23 @@
+{
+    "localhost:3000" :{
+        "name" : "My awesome website",
+        "description" : "My awesome website description",
+        "template" : "default" ,
+        "css" : {
+            "body" : {
+                "font-size" : "20px",
+                "background" : "#fff"
+            },
+            ".myclass" : {
+                "font-size" : "10px",
+                "color" : "white"
+            }
+        }
+    },
+    "localhost:3030" :{
+        "name" : "My second awesome website",
+        "template" : "default",
+        "css" : ""
+ 
+    }
+}

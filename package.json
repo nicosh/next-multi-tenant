@@ -1,0 +1,19 @@
+{
+  "name": "next-multi-tenant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "client1": "next dev -p 3030",
+    "build": "next build",
+    "start": "next start",
+    "addTemplate": "node ./tenant/cli/addTemplate.js"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "next": "9.5.5",
+    "next-absolute-url": "^1.2.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
