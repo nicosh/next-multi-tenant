@@ -1,19 +1,22 @@
 {
   "name": "next-multi-tenant",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A B2B oriented multi-tenant app built on top of Next.js and react, that show how is possible to have multiple websites (ex. online stores ) from a single code base.  \r Next-multi-tenant cuttently supports :",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "client1": "next dev -p 3030",
-    "build": "next build",
-    "start": "next start",
-    "addTemplate": "node ./tenant/cli/addTemplate.js"
+    "tenant_dev": "cd tenants && npm run dev",
+    "tenant_build": "cd tenants && npm run build",
+    "tenant_start": "cd tenants && npm run start",
+    "tenant_addTemplate": "cd tenants && node ./tenant/cli/addTemplate.js"
   },
-  "dependencies": {
-    "inquirer": "^7.3.3",
-    "next": "9.5.5",
-    "next-absolute-url": "^1.2.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicosh/next-multi-tenant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicosh/next-multi-tenant/issues"
+  },
+  "homepage": "https://github.com/nicosh/next-multi-tenant#readme"
 }

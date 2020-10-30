@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import absoluteUrl from 'next-absolute-url'
-import {setStorage,GetFromStorage} from './drivers/localStorage'
+import {setStorage,GetFromStorage} from '../drivers/localStorage'
+import Router from 'next/router'
 
 class DataProvider extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class DataProvider extends Component {
     async componentDidMount() {
         const { SSR,UseLocalStorage } = this.props
         const { origin } = absoluteUrl(this.props.req)
+        const {pathname} = Router
         let url = `${origin}/api/ping`
         if (!SSR) {
             let cachedData = UseLocalStorage ? GetFromStorage() : false 
@@ -25,7 +27,13 @@ class DataProvider extends Component {
                     websiteData: cachedData
                 })
             }else{
-                let request = await fetch(url)
+                let request = await fetch(url,{
+                    method : "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body : JSON.stringify({path : pathname})
+                })
                 let data = await request.json()
                 UseLocalStorage ? setStorage(data) : false
                 this.setState({

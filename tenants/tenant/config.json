@@ -1,6 +1,6 @@
 {
     "SSR" : true,
-    "UseLocalStorage" : true, 
+    "UseLocalStorage" : false, 
     "LocalStorageTtl" : 60000,
     "LocalStorageKey" : "websitebdata",
     "DefaultTemplateName" : "default"

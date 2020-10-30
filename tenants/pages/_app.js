@@ -1,4 +1,4 @@
-import DataProvider from '../tenant/dataProvider'
+import DataProvider from '../tenant/components/dataProvider'
 import config from '../tenant/config'
 import fetchData from '../tenant/drivers/fetchData'
 const { SSR, UseLocalStorage } = config
@@ -19,7 +19,7 @@ if (SSR) {
     MyApp.getInitialProps = async ({ ctx }) => {
         const host = ctx.req.headers.host
         const url = ctx.req.url 
-        const data = await fetchData(host,url)
+        const data = await fetchData(host,url,ctx.req)
         return {
             websiteData: {
                 ...data

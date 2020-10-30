@@ -1,0 +1,15 @@
+{
+    "name" : "My awesome websitesdad!",
+    "description" : "My awesome website description",
+    "template" : "default" ,
+    "css" : {
+        "body" : {
+            "font-size" : "20px",
+            "background" : "#fff"
+        },
+        ".myclass" : {
+            "font-size" : "10px",
+            "color" : "white"
+        }
+    }
+}
